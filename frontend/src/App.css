@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 } */
+
+.centered-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+}

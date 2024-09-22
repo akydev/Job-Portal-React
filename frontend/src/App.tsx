@@ -1,5 +1,6 @@
 import {} from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LandingPage from "./component/LandingPage";
 import Login from "./component/Login";
 import RegistrationRecuiter from "./component/RegistrationRecuiter";
 
@@ -8,7 +9,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<Index />} /> */}
+          <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registration" element={<RegistrationRecuiter />} />
         </Routes>

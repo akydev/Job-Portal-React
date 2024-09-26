@@ -11,30 +11,12 @@ import {
   CardContent,
   CardMedia,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import BasicHeader from "./BasicHeader";
 
 const LandingPage: React.FC = () => {
-  const navigate = useNavigate();
   return (
     <div>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            <a onClick={() => navigate("/")}>My Job Portal</a>
-          </Typography>
-
-          {/* <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            My Job portal
-          </Typography> */}
-          <Button color="inherit" onClick={() => navigate("/login")}>
-            Login
-          </Button>
-          <Button color="inherit" onClick={() => navigate("/registration")}>
-            Sign Up
-          </Button>
-        </Toolbar>
-      </AppBar>
-
+      <BasicHeader />
       <Box
         sx={{
           display: "flex",

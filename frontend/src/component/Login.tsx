@@ -10,15 +10,13 @@ import {
   Input,
   InputLabel,
   Button,
-  Box,
   Card,
   CardContent,
   Typography,
   CardActions,
-  Toolbar,
-  AppBar,
 } from "@mui/material";
 import "../App.css"; // Import the CSS file
+import BasicHeader from "./BasicHeader";
 
 const initialValues: ILogin = {
   email: "",
@@ -57,22 +55,8 @@ export default function Login() {
       alignItems="center"
       style={{ minHeight: "100vh" }} // Full viewport height for centering
     >
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            <a onClick={() => navigate("/")}>My Job Portal</a>
-          </Typography>
-          {/* <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            My Job Portal
-          </Typography> */}
-          <Button color="inherit" onClick={() => navigate("/login")}>
-            Login
-          </Button>
-          <Button color="inherit" onClick={() => navigate("/registration")}>
-            Sign Up
-          </Button>
-        </Toolbar>
-      </AppBar>
+      <BasicHeader />
+
       <Grid item xs={12} sm={8} md={6}>
         {/* Responsive card size */}
         <Card sx={{ minWidth: 275 }}>
